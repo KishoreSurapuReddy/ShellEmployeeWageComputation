@@ -12,3 +12,16 @@ hoursForADayFullTime=8;
 hoursForADayPartTime=4;
 fullTimeDailyWage=$(( $wagePerHour*$hoursForADayFullTime ));
 partTimeDailyWage=$(( $wagePerHour*$hoursForADayPartTime ));
+echo "enter the choice 1.FullTimeEmployyeWage 2.PartTimeEmployeeWage"
+read choice
+case $choice in
+1)
+  echo "employeeDailyWage is : $fullTimeDailyWage"
+  ;;
+2)
+  echo "partTimeEmployeeWage is :"$partTimeDailyWage
+  ;;
+*)
+  echo "enter correct details"
+  ;;
+esac
