@@ -36,4 +36,27 @@ while [[ ($noOfHours -le 100) ]];
    noOfHours=$(($noOfHours+8));
 done
 echo "dailyWage for 100 days is : "$dailyWage;
-
+noOfDays=0;
+wageForMonthFullTime=0;
+wageForMonthPartTime=0;
+presentDays=0;
+function workingHoursOfEmployee() {
+  while [ $noOfDays -le 20 ];
+  do
+    wageForMonthFullTime=$(($wageForMonthFullTime+$fullTimeDailyWage));
+    wageForMonthPartTime=$(($wageForMonthPartTime+$partTimeDailyWage));
+    noOfDays=$(($noOfDays+1));
+    randomNumber=$(($RANDOM%2));
+    if [ $randomNumber -eq 1 ];
+     then
+       presentDays=$(($presentDays+1));
+    fi
+  done
+  workingHoursOfFullTimeEmployye=$(( $presentDays*8 ));
+  workingHoursOfPartTimeEmployye=$(( $presentDays*4 ));
+}
+workingHoursOfEmployee
+echo "employee monthly wage for 20 days is : "$wageForMonthFullTime;
+echo "employee monthly wage for 20 days is : "$wageForMonthPartTime;
+echo "working Hours Of Full Time Employye is: "$workingHoursOfFullTimeEmployye;
+echo "working Hours Of Part Time Employye is: "$workingHoursOfPartTimeEmployye;
