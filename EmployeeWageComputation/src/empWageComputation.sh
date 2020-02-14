@@ -67,3 +67,12 @@ employeeDailyWage=$(($wageForHour*$noOfWorkingHours));
 monthlyEmployeeWage=$(($employeeDailyWage*$daysInMonth));
 echo "employee Daily Wage is : "$employeeDailyWage;
 echo "employee monthly wage is : "$monthlyEmployeeWage;
+monthlyDays=1;
+while [ $monthlyDays -le 20 ];
+  do
+    echo "employee day : "$monthlyDays;
+    dailywage=$(($monthlyDays*($noOfWorkingHours*$wageForHour)));
+    echo "dailyWage is : "$dailywage;
+    noOfDays=$(($noOfDays+1));
+    echo "total wage for month is : "$wageForMonthFullTime;
+  done
