@@ -28,3 +28,12 @@ esac
 daysOfMonth=20;
 fullTimeMonthlyWage=$(( $daysOfMonth*$fullTimeDailyWage ));
 partTimeMonthlyWage=$(( $daysOfMonth*$partTimeDailyWage ));
+dailyWage=0;
+noOfHours=0;
+while [[ ($noOfHours -le 100) ]];
+ do
+   dailyWage=$(($dailyWage+($wagePerHour*$hoursForADayFullTime)));
+   noOfHours=$(($noOfHours+8));
+done
+echo "dailyWage for 100 days is : "$dailyWage;
+
