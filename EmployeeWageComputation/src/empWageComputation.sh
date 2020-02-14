@@ -25,3 +25,6 @@ case $choice in
   echo "enter correct details"
   ;;
 esac
+daysOfMonth=20;
+fullTimeMonthlyWage=$(( $daysOfMonth*$fullTimeDailyWage ));
+partTimeMonthlyWage=$(( $daysOfMonth*$partTimeDailyWage ));
