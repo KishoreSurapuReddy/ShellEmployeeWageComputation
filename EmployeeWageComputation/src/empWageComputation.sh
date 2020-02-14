@@ -6,7 +6,9 @@ if [ $random -eq 1 ];
    echo "Employee is present "
 fi
 fullTimeDailyWage=0;
+partTimeDailyWage=0;
 wagePerHour=20;
 hoursForADayFullTime=8;
+hoursForADayPartTime=4;
 fullTimeDailyWage=$(( $wagePerHour*$hoursForADayFullTime ));
-echo $fullTimeDailyWage
+partTimeDailyWage=$(( $wagePerHour*$hoursForADayPartTime ));
